@@ -9,12 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-framework</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-aop</module>
-        <module>spring-annotation-config-demo</module>
-    </modules>
+    <artifactId>javase</artifactId>
 
 
 </project>
