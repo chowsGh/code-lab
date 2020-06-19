@@ -21,11 +21,11 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
     }
 
     @Override protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] { WebInitializerConfig.class };
+        return new Class<?>[] {WebInitializerConfig.class};
     }
 
     @Override protected String[] getServletMappings() {
-        return new String[] { "/" };
+        return new String[] {"/"};
     }
 }
 
