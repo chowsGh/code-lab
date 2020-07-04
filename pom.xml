@@ -30,6 +30,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+        <!-- spring -->
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
         <!-- orm lib -->
         <mybatisplus.version>3.3.0</mybatisplus.version>
@@ -39,12 +40,15 @@
         <!-- 工具类 -->
         <!-- apache common -->
         <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
         <!-- guava -->
         <guava.version>28.1-jre</guava.version>
         <hutool.version>5.0.6</hutool.version>
 
         <!-- mysql jdbc -->
         <mysql.jdbc.version>8.0.20</mysql.jdbc.version>
+        <!-- dom4j -->
+        <dom4j.version>1.6.1</dom4j.version>
     </properties>
 
     <!-- 全局依赖管理 -->
@@ -103,11 +107,23 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
             </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.jdbc.version}</version>
+            </dependency>
+
+            <!-- dom4j -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

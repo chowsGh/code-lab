@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-data</artifactId>
+        <groupId>top.clydezhou.lab.demo</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-data-mongodb</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+        </dependency>
+
+        <!--
+        Instead of the single artifact uber-jar mongo-java-driver, imports are now split to include separate artifacts:
+        org.mongodb:mongodb-driver-core (required)
+        org.mongodb:mongodb-driver-sync (optional)
+        org.mongodb:mongodb-driver-reactivestreams (optional)
+        Depending on the application one of the mongodb-driver-sync, mongodb-driver-reactivestreams artifacts
+        is is required next to the mandatory mongodb-driver-core.
+        It is possible to combine the sync and reactive drivers in one application if needed.
+        -->
+<!--        <dependency>-->
+<!--            <groupId>org.mongodb</groupId>-->
+<!--            <artifactId>mongodb-driver-sync</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
