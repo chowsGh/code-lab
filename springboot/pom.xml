@@ -6,11 +6,22 @@
         <artifactId>parent</artifactId>
         <groupId>top.clydezhou.lab.demo</groupId>
         <version>${revision}</version>
+
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot</artifactId>
-    <name>spring-boot</name>
+    <artifactId>springboot</artifactId>
+    <name>springboot</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>springboot-api</module>
+        <module>springboot-dao</module>
+        <module>springboot-manager</module>
+        <module>springboot-service</module>
+        <module>springboot-web</module>
+        <module>start</module>
+    </modules>
 
     <dependencies>
         <dependency>

@@ -12,7 +12,7 @@
     <modules>
         <module>algorithms</module>
         <module>mybatis</module>
-        <module>spring-boot</module>
+        <module>springboot</module>
         <module>spring-data</module>
         <module>spring-framework</module>
         <module>common-tool</module>
@@ -32,6 +32,8 @@
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         <!-- spring -->
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
+        <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
+
         <!-- orm lib -->
         <mybatisplus.version>3.3.0</mybatisplus.version>
         <mybatis.version>3.5.3</mybatis.version>
@@ -59,6 +61,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- spring boot admin -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
