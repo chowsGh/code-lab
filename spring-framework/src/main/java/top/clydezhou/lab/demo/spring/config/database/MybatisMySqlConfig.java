@@ -56,7 +56,7 @@ public class MybatisMySqlConfig {
     @Bean
     public SqlSessionFactory mysqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
-        factoryBean.setDataSource(dataSource());
+        factoryBean.setDataSource(mysqlDataSource());
         PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver =
             new PathMatchingResourcePatternResolver();
         factoryBean
@@ -74,8 +74,8 @@ public class MybatisMySqlConfig {
      *
      * @return the data source
      */
-    @Bean
-    public DataSource dataSource() {
+    @Bean("mysqlDataSource")
+    public DataSource mysqlDataSource() {
         HikariDataSource source = new HikariDataSource();
         source.setDriverClassName(dataSourceConfig.getDriverClassName());
         source.setJdbcUrl(dataSourceConfig.getJdbcUrl());

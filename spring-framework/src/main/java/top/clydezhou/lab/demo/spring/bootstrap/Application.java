@@ -25,16 +25,6 @@ public class Application {
 
     public static void main(String[] args) {
         try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Application.class)) {
-            Map<String, Runnable> beansOfType = ctx.getBeansOfType(Runnable.class);
-            while (true) {
-                for (Map.Entry<String, Runnable> runEntry : beansOfType.entrySet()) {
-                    try {
-                        runEntry.getValue().run();
-                    } catch (Exception e) {
-                        LOGGER.error("{} exception", runEntry.getKey(), e);
-                    }
-                }
-            }
 
         }
     }

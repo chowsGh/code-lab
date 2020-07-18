@@ -20,6 +20,6 @@ public class AopDemoClass {
     @LogAnnotation()
     public void demo() {
         LOGGER.debug("{} demo.", AopDemoClass.class.getName());
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
     }
 }

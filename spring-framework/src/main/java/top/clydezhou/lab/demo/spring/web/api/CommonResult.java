@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @author clyde
  * @date 2020-07-02 23:33
  */
-public class DataResult<T> extends SimpleResult implements Serializable {
+public class CommonResult<T> extends SimpleResult implements Serializable {
 
     private T data;
 

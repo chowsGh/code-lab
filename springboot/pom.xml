@@ -21,6 +21,7 @@
         <module>springboot-service</module>
         <module>springboot-web</module>
         <module>start</module>
+        <module>springboot-common</module>
     </modules>
 
     <dependencies>

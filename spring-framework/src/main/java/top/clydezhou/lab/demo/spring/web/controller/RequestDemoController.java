@@ -2,6 +2,7 @@ package top.clydezhou.lab.demo.spring.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import top.clydezhou.lab.demo.spring.config.aop.LogAnnotation;
+import top.clydezhou.lab.demo.spring.entity.UserInfo;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -13,8 +14,8 @@ import java.util.Map;
  * @date 2020-06-18 23:35
  */
 @RestController
-@RequestMapping("/hello")
-public class HelloController {
+@RequestMapping("/request-demo")
+public class RequestDemoController {
 
     public static final String TIP_STR = "URL 匹配规则演示：";
 
@@ -67,6 +68,20 @@ public class HelloController {
         Map<String, String> map = new HashMap<>();
         map.put(TIP_STR, "RequestParam");
         map.put("paramName", paramName);
+        return map;
+    }
+
+    /**
+     * @requestBody注解常用来处理content-type不是默认的application/x-www-form-urlcoded编码的内容，比如说：application/json或者是application/xml等。一般情况下来说常用其来处理application/json类型。
+     *
+     * @param userInfo
+     * @return
+     */
+    @RequestMapping("/requestBody")
+    public Map<String, String> requestBody(@RequestBody String userInfo) {
+        Map<String, String> map = new HashMap<>();
+        map.put(TIP_STR, "requestBody");
+        map.put("userInfo", userInfo.toString());
         return map;
     }
 }

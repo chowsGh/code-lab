@@ -57,4 +57,10 @@ public class UserInfo {
     public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", email='" + email + '\''
+            + ", createTime=" + createTime + ", gender=" + gender + '}';
+    }
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
  * @author clyde
  * @date 2020-07-01 0:10
  */
-@Configuration
+@Configuration(proxyBeanMethods = false)
 public class HttpMessageConverterConfig {
 
     @Bean
