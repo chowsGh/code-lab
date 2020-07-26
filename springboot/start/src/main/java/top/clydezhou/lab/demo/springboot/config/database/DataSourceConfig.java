@@ -6,11 +6,11 @@ package top.clydezhou.lab.demo.springboot.config.database;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
+ * 这里只做演示，没有实际的作用。
+ * ConfigurationProperties 用于注入相应的配置，不支持 驼峰形式的key,需要使用 短横线形式的key 例如 ： data-source 形式。同时可以用于 生成 metadata，方便 ide 提示配置
  * @author chows
  * Date:2019-12-27 12:12:29
  */
-// ConfigurationProperties 用于注入相应的配置，不支持 驼峰形式的key,需要使用 短横线形式的key 例如 ： data-source 形式。
-// 同时可以用于 生成 metadata，方便 ide 提示配置
 @ConfigurationProperties(prefix = "datasource.mysql")
 public class DataSourceConfig {
     private String driverClassName;

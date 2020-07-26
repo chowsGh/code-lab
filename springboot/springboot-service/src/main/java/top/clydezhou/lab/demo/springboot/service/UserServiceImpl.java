@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
     public UserModel addUser(UserModel user) {
         UserDO userDO = new UserDO();
         copier.copy(user, userDO, null);
-
         Long id = userMapper.insert(userDO);
         user.setId(id);
         return user;

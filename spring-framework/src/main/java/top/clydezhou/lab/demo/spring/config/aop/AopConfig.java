@@ -9,6 +9,18 @@ import org.springframework.core.annotation.OrderUtils;
 import java.lang.reflect.AnnotatedElement;
 
 /**
+ *
+ * 参考
+ * org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#applyBeanPostProcessorsAfterInitialization(java.lang.Object, java.lang.String)
+ * org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor
+ * 3 个 aop 代理生成类
+ * 1. org.springframework.aop.framework.JdkDynamicAopProxy#getProxy(java.lang.ClassLoader)
+ * 2. spring 4.0 cglib 默认使用 org.springframework.aop.framework.ObjenesisCglibAopProxy
+ * 3. org.springframework.aop.framework.CglibAopProxy#getProxy(java.lang.ClassLoader)
+ *
+ * 寻找连接点 org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator#getAdvicesAndAdvisorsForBean(java.lang.Class, java.lang.String, org.springframework.aop.TargetSource)
+ *
+ * 如果存在多个类型增强，根据 AbstractAdvisingBeanPostProcessor.beforeExistingAdvisors 看是放到最前还是最后 AdvisedSupport
  * @author clyde
  * @date 2020-07-03 0:22
  */

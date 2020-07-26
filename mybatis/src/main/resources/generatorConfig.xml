@@ -1,0 +1,22 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="dsql" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/code-demo?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=true&amp;serverTimezone=GMT%2B8"
+        userId="root" password="-pl,0OKM">
+            <!-- 避免查找数据库中其他同名表 -->
+            <property name="nullCatalogMeansCurrent" value="true" />
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="example.model" targetProject="mybatis/src/main/java"/>
+
+        <sqlMapGenerator targetPackage="example.mapper" targetProject="mybatis/src/main/resources"/>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="example.mapper" targetProject="mybatis/src/main/java"/>
+
+        <table tableName="userinfo"  />
+        <table tableName="users"  />
+    </context>
+</generatorConfiguration>

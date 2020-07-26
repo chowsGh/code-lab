@@ -39,6 +39,8 @@
         <mybatis.version>3.5.3</mybatis.version>
         <mybatis.spring.version>2.0.3</mybatis.spring.version>
         <mybatis.springboot.version>2.1.3</mybatis.springboot.version>
+        <!-- sharding -->
+        <sharding-sphere.version>4.1.0</sharding-sphere.version>
         <!-- 工具类 -->
         <!-- apache common -->
         <commons-collections4.version>4.4</commons-collections4.version>
@@ -98,6 +100,19 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus</artifactId>
                 <version>${mybatisplus.version}</version>
+            </dependency>
+            <!-- -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding-sphere.version}</version>
+            </dependency>
+
+            <!-- for spring namespace -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-namespace</artifactId>
+                <version>${sharding-sphere.version}</version>
             </dependency>
 
             <!-- 工具类 -->

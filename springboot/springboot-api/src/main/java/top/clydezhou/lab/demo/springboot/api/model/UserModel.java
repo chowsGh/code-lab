@@ -2,6 +2,8 @@ package top.clydezhou.lab.demo.springboot.api.model;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
  */
@@ -13,4 +15,7 @@ public class UserModel {
 
     private Integer age;
 
+    private LocalDateTime gmtCreate;
+
+    private LocalDateTime gmtModified;
 }
