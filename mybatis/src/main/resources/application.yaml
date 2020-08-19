@@ -1,14 +1,9 @@
+server:
+    port: 8080
 spring:
-  datasource:
-    url:
-    password:
-    username:
-
+    profiles:
+        active: h2
 mybatis:
-  type-handlers-package: top.clydezhou
-  configuration:
-    map-underscore-to-camel-case: true
-    default-fetch-size: 100
-    default-statement-timeout: 30
-
-props
+    #config-location: 'classpath:mybatis-configuration.xml'
+    type-handlers-package: top.clydezhou.lab.demo.mybatis.spring.config.mybatis
+    mapper-locations: 'classpath:mapper/*'

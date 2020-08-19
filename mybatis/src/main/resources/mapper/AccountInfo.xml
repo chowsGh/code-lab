@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.clydezhou.lab.demo.mybatis.spring.mapper.AccountInfoMapper">
+    <resultMap type="top.clydezhou.lab.demo.mybatis.spring.entity.AccountInfo" id="AccountInfo">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="nickname" property="nickName"/>
+        <result column="createtime" property="createTime"/>
+        <result column="lastupdatetime" property="lastUpdateTime"/>
+        <result column="flag" property="flag"/>
+    </resultMap>
+
+    <!-- open="("  close=")" -->
+    <insert id="saveAll">
+        INSERT INTO accountinfo (`id`, `username`, `password`, `nickname`, `createtime`, `lastupdatetime`, `flag`) VALUES
+        <foreach item="accountInfo" index="index" collection="list"
+                 separator=",">
+            (null, #{accountInfo.username}, #{accountInfo.password}, #{accountInfo.nickName}, null, null, #{accountInfo.flag})
+        </foreach>
+    </insert>
+</mapper>

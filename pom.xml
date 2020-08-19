@@ -150,6 +150,32 @@
                 <artifactId>dom4j</artifactId>
                 <version>${dom4j.version}</version>
             </dependency>
+
+            <!-- cola -->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>cola-core</artifactId>
+                <version>3.0.0</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>cola-common</artifactId>
+                <version>3.0.0</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.72</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.taobao.arthas</groupId>
+                <artifactId>arthas-spring-boot-starter</artifactId>
+                <version>3.3.7</version>
+                <type>jar</type>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
