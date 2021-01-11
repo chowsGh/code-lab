@@ -14,7 +14,7 @@ public class UndirectedGraph {
     public UndirectedGraph(int v) {
         this.v = v;
         adjacencyList = new LinkedList[v];
-        for (int i=0; i<v; ++i) {
+        for (int i = 0; i < v; ++i) {
             adjacencyList[i] = new LinkedList<>();
         }
     }
@@ -40,9 +40,6 @@ public class UndirectedGraph {
 
     @Override
     public String toString() {
-        return "UndirectedGraph{" +
-                "v=" + v +
-                ", adjacencyList=" + Arrays.toString(adjacencyList) +
-                '}';
+        return "UndirectedGraph{" + "v=" + v + ", adjacencyList=" + Arrays.toString(adjacencyList) + '}';
     }
 }

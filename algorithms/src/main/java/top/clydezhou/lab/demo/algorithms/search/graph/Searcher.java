@@ -1,37 +1,19 @@
-package top.clydezhou.lab.demo.algorithms.search;
+package top.clydezhou.lab.demo.algorithms.search.graph;
 
 import top.clydezhou.lab.demo.algorithms.search.structure.UndirectedGraph;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Random;
 
 /**
- *
+ * @author clyde
+ * @date 2021-01-11 22:16
  */
-public class DFSDemo {
-    public static void main(String[] args) {
-        Searcher search = new Searcher();
-        int v = 10;
-        // 随机生成无向图
-        UndirectedGraph graph = new UndirectedGraph(v);
-        Random random = new Random(System.currentTimeMillis());
-        for (int i = 0; i < v; i++) {
-            graph.addEdge(i, random.nextInt(v));
-            graph.addEdge(i, random.nextInt(v));
-            graph.addEdge(i, random.nextInt(v));
-        }
-        System.out.println(graph);
-        search.dfs(graph, 0, 9);
-        System.out.println();
-        search.bfs(graph, 0, 9);
-    }
-}
-
-class Searcher {
-    public void bfs(UndirectedGraph graph, int start, int target) {
-        if (start == target)
+public class Searcher {
+    public void breathFirstSearch(UndirectedGraph graph, int start, int target) {
+        if (start == target) {
             return;
+        }
         int v = graph.getNodeCount();
 
         boolean[] visited = new boolean[v];
@@ -69,7 +51,7 @@ class Searcher {
 
     boolean found = false; // 全局变量或者类成员变量
 
-    public void dfs(UndirectedGraph graph, int s, int t) {
+    public void depthFirstSearch(UndirectedGraph graph, int s, int t) {
         found = false;
         int v = graph.getNodeCount();
         boolean[] visited = new boolean[v];
@@ -83,8 +65,9 @@ class Searcher {
     }
 
     private void recurDfs(int w, int t, boolean[] visited, int[] prev, LinkedList<Integer>[] adj) {
-        if (found == true)
+        if (found == true) {
             return;
+        }
         visited[w] = true;
         if (w == t) {
             found = true;
