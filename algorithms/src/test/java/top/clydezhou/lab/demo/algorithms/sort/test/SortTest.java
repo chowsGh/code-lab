@@ -52,6 +52,13 @@ public class SortTest {
         }
     }
 
+    @Test
+    public void testQuickSort() {
+        for (int i = 0; i < 10; i++) {
+            testSort(randomIntArr(100000), SimpleSort::quickSort);
+        }
+    }
+
     private void testSort(Consumer<int[]> sort) {
         testSort(null, sort);
     }

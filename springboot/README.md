@@ -13,7 +13,7 @@ META-INF/spring.factories
 ```
 
 ### 外置配置（external configration）
-- 加载顺序
+- 加载顺序 (org.springframework.boot.context.config.ConfigFileApplicationListener.Loader.getSearchLocations())
   - A `/config` subdirectory of the current directory
   - The current directory
   - A classpath `/config` package
@@ -26,6 +26,8 @@ META-INF/spring-configuration-metadata.json
 - #### Profile-specific Properties（指定 profile 配置）
 
 - 
+- 原理：当Environment 准备好后会发送消息，给 ConfigFileApplicationListener 。 org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent 里处理
+在由 EnvironmentPostProcessor 处理 ConfigFileApplicationListener.postProcessEnvironment --> org.springframework.boot.context.config.ConfigFileApplicationListener.Loader.load()
 
 ## spring mvc  
 

@@ -3,6 +3,7 @@ package top.clydezhou.lab.demo.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 import top.clydezhou.lab.demo.springboot.common.SpringUtils;
 import top.clydezhou.lab.demo.springboot.config.database.DataSourceConfig;
@@ -20,7 +21,8 @@ import top.clydezhou.lab.demo.springboot.config.database.DataSourceConfig;
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
+
         DataSourceConfig bean = SpringUtils.getBean(DataSourceConfig.class);
         System.out.println(bean);
     }
