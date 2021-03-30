@@ -149,33 +149,31 @@ public class SimpleSort {
         quickSort(arr, 0, arr.length - 1);
     }
 
-    public static void quickSort(int[] nums, int lo, int hi) {
-        if (hi <= lo) {
+    public static void quickSort(int[] nums, int low, int high) {
+        if (high <= low) {
             return;
         }
-        int p = quickSortPartition(nums, lo, hi);
-        /************************/
-
-        quickSort(nums, lo, p - 1);
-        quickSort(nums, p + 1, hi);
+        int pivote = quickSortPartition(nums, low, high);
+        quickSort(nums, low, pivote - 1);
+        quickSort(nums, pivote + 1, high);
     }
 
     private static int quickSortPartition(int[] arr, int startIndex, int endIndex) {
         int pivot = arr[startIndex];//取基准值
-        int mark = startIndex;//Mark初始化为起始下标
+        int pivoteIndex = startIndex;//Mark初始化为起始下标
 
         for (int i = startIndex + 1; i <= endIndex; i++) {
             if (arr[i] < pivot) {
                 //小于基准值 则mark+1，并交换位置。
-                mark++;
-                int p = arr[mark];
-                arr[mark] = arr[i];
-                arr[i] = p;
+                pivoteIndex++;
+                swap(arr, pivoteIndex, i);
             }
         }
         //基准值与mark对应元素调换位置
-        arr[startIndex] = arr[mark];
-        arr[mark] = pivot;
-        return mark;
+        swap(arr, startIndex, pivoteIndex);
+        return pivoteIndex;
     }
+
+
+
 }
