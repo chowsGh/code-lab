@@ -46,7 +46,7 @@
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-fileupload.version>1.4</commons-fileupload.version>
         <!-- guava -->
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <hutool.version>5.0.6</hutool.version>
 
         <!-- mysql jdbc -->
