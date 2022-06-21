@@ -50,7 +50,7 @@
         <hutool.version>5.0.6</hutool.version>
 
         <!-- mysql jdbc -->
-        <mysql.jdbc.version>8.0.20</mysql.jdbc.version>
+        <mysql.jdbc.version>8.0.28</mysql.jdbc.version>
         <!-- dom4j -->
         <dom4j.version>1.6.1</dom4j.version>
     </properties>
